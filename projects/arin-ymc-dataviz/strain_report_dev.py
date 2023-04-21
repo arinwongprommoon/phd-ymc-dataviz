@@ -41,7 +41,7 @@ from utils import pretty_format
 
 if True:
     data_directory = Path(
-        "/home/jupyter-arin/data/668_2023_02_09_flavin_fy4_htb2_K_deficient_02_00/"
+        "/home/jupyter-arin/data/1649_2023_04_18_flavin_by4742swain_by4742morgan_tsa1tsa2morgan_lysmedia_02_00/"
     )
     h5path_to_abbrev_dict = {
         "extraction/Flavin_bgsub/max/mean": ("flavin", "continuous"),
@@ -56,17 +56,17 @@ if True:
     grouper = NameGrouper(data_directory)
     # bodge: assumes that directory name begins with 5-digit OmeroID,
     # ideally should pull from metadata
-    experimentID = grouper.name[0:3]
+    experimentID = grouper.name[0:4]
     raw = RawSignalCollection(grouper, h5path_to_abbrev_dict)
 
 
 # Choose strain & interval
 if True:
     # Choose strain and interval
-    strain_name = "fy4"
-    wildtype_name = "fy4"
-    interval_start = 72+5
-    interval_end = 192
+    strain_name = "tsa1tsa2morgan"
+    wildtype_name = "by4742swain"
+    interval_start = 0+5
+    interval_end = 240
     critical_freqs = 1 / 350
 
     remove_nosc = False
