@@ -41,7 +41,7 @@ from utils import pretty_format
 
 if True:
     data_directory = Path(
-        "/home/jupyter-arin/data/1649_2023_04_18_flavin_by4742swain_by4742morgan_tsa1tsa2morgan_lysmedia_02_00/"
+        "/home/jupyter-arin/data/1253_2023_03_23_flavin_by4742swain_by4742morgan_tsa1tsa2morgan_lysmedia_01_00/"
     )
     h5path_to_abbrev_dict = {
         "extraction/Flavin_bgsub/max/mean": ("flavin", "continuous"),
@@ -63,7 +63,7 @@ if True:
 # Choose strain & interval
 if True:
     # Choose strain and interval
-    strain_name = "tsa1tsa2morgan"
+    strain_name = "by4742swain"
     wildtype_name = "by4742swain"
     interval_start = 0+5
     interval_end = 240
