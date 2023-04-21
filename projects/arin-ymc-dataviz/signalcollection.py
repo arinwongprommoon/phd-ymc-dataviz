@@ -31,6 +31,15 @@ class SignalCollection:
             (rows).
 
         """
+        # REPLACE NEXT LINE OF CODE WITH THIS IF THERE ARE PROBLEMS
+        # (better handling of zero-element lists)
+        # def get_first_interval(x):
+        #     list_intervals = np.diff(np.where(np.array(x) > 0))[0]
+        #     # Checks that it is not empty
+        #     if list_intervals.any():
+        #         return list_intervals[0]
+        #     else:
+        #         return np.nan
         temp_df = mask_df.apply(lambda x: np.diff(np.where(np.array(x) > 0)), axis=1)
         intervals = np.hstack(temp_df.to_list()).ravel()
         return np.array(intervals)
